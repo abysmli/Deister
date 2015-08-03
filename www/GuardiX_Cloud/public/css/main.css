@@ -1,0 +1,154 @@
+/*
+ *============================================================================
+ * 
+ * Author      : Li, Yuan
+ * File        : main.css
+ * email       : yuan.li@student.emw.hs-anhalt.de
+ * Version     : 3.0
+ * Copyright   : All rights reserved by Anhalt University of Applied Sciences
+ * Description : 
+ *     Main Cascading Style Sheets for supporting foreend HTML pages.
+ *
+ *============================================================================
+ */
+
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+table {
+	text-align: center;
+}
+
+th {
+	text-align: center;
+	vertical-align: middle !important;
+	cursor:pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+th span{
+	margin-left: 1em;
+}
+
+pre {
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+
+.checkbox label{
+	user-select: none;
+}
+
+#mandant_list_group {
+	overflow: auto;
+}
+
+#client_list_group {
+	overflow: auto;
+}
+
+#device_list_group {
+	overflow: auto;
+}
+
+#client_list_group_mandant {
+	overflow: auto;
+}
+
+#device_list_group_mandant {
+	overflow: auto;
+}
+
+.mandant_block p{
+	display:inline-block;
+	width:100%;
+	padding: 11px;
+	margin:-11px;
+}
+
+.mandant_block p b{
+	margin-right:1em; 
+}
+
+.mandant_block span{
+	cursor:pointer;
+}
+
+.client_block p{
+	display:inline-block;
+	width: 100%;
+	padding: 11px;
+	margin:-11px;
+}
+
+.client_block p b{
+	margin-right:1em; 
+}
+
+.client_block span{
+	cursor:pointer;
+}
+
+.device_block p{
+	display:inline-block;
+	width: 100%;
+	padding: 11px;
+	margin:-11px;
+}
+
+.device_block p b{
+	margin-right:1em; 
+}
+
+.device_block span{
+	cursor:pointer;
+}
+
+.login_block {
+	background-color:white;
+	position: fixed;
+	min-width: 300px;
+	top:20%;
+	right: 35%;
+	left:35%;
+	padding:20px;
+	border: 1px solid #424242;
+	box-shadow: 3px 3px 3px 0px #424242;
+}
+
+.login_body {
+	height: 1080px;
+	overflow:hidden;
+	background: linear-gradient(to bottom, #606c88 0%,#3f4c6b 100%);
+}
+
+.event_log_list {
+	height: 300px;
+	overflow: auto;
+}
+
+
+.fixed_headers {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.fixed_headers thead tr {
+  display: block;
+  position: relative;
+}
+
+.fixed_headers tbody {
+  display: block;
+  overflow: auto;
+  overflow-y:auto;
+}

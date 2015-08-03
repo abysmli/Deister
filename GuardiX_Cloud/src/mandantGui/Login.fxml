@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.9998558593725" prefWidth="272.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mandantGui.LoginController">
+  <children>
+    <VBox id="VBox" alignment="CENTER_LEFT" layoutX="34.0" layoutY="124.0" spacing="0.0">
+      <children>
+        <Label text="Username:" />
+        <TextField fx:id="username_input" onAction="#username_enter" prefHeight="25.0" prefWidth="200.0" promptText="Mandant Username" />
+      </children>
+    </VBox>
+    <VBox id="VBox" alignment="CENTER_LEFT" layoutX="35.0" layoutY="180.0" spacing="0.0">
+      <children>
+        <Label text="Password:" />
+        <PasswordField fx:id="password_input" onAction="#password_enter" prefHeight="25.0" prefWidth="200.0" promptText="Mandant Password" />
+      </children>
+    </VBox>
+    <Button fx:id="login_button" layoutX="178.0" layoutY="242.0" mnemonicParsing="false" onAction="#login_handler" text="Login" />
+    <Label layoutX="31.0" layoutY="32.0" text="Mandant GUI">
+      <font>
+        <Font size="27.0" />
+      </font>
+    </Label>
+    <Label layoutX="91.0" layoutY="74.0" text="GuardiX Cloud">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Label fx:id="information_label" layoutX="38.0" layoutY="272.0" prefHeight="32.0" prefWidth="200.0" text="" textFill="RED" wrapText="true" />
+  </children>
+</AnchorPane>

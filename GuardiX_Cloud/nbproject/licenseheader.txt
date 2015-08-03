@@ -1,0 +1,9 @@
+============================================================================
+// 
+// Author      : Li, Yuan
+// email       : abysmli@gmail.com
+// Version     : 1.0
+// Copyright   : All rights reserved by Anhalt University of Applied Sciences
+// Description : Web Graphical User Interface of Mandant Controller
+//============================================================================
+

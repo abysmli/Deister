@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mandantGui.Mandant_GUIController">
+  <children>
+    <SplitPane dividerPositions="0.3360655737704918" focusTraversable="true" prefHeight="587.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="113.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TabPane prefHeight="669.0" prefWidth="298.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab fx:id="mandant_information" text="Mandant Information">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color:#f2f2f2;">
+                      <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Mandant Information:" textAlignment="LEFT" wrapText="false">
+                          <font>
+                            <Font name="System Bold" size="20.0" />
+                          </font>
+                        </Label>
+                        <VBox id="VBox" alignment="CENTER_LEFT" disable="false" focusTraversable="false" spacing="70.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="81.0">
+                          <children>
+                            <HBox id="HBox" alignment="CENTER_LEFT" spacing="10.0">
+                              <children>
+                                <Label text="Mandant ID:">
+                                  <font>
+                                    <Font name="System Bold" size="14.0" fx:id="x1" />
+                                  </font>
+                                </Label>
+                                <Label fx:id="mandant_id_output" text="">
+                                  <font>
+                                    <Font size="14.0" fx:id="x2" />
+                                  </font>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <HBox id="HBox" alignment="CENTER_LEFT" spacing="10.0">
+                              <children>
+                                <Label font="$x1" text="Company:" />
+                                <Label fx:id="company_output" font="$x2" text="" />
+                              </children>
+                            </HBox>
+                            <HBox id="HBox" alignment="CENTER_LEFT" spacing="10.0">
+                              <children>
+                                <Label font="$x1" text="Address:" />
+                                <Label fx:id="address_output" font="$x2" text="" />
+                              </children>
+                            </HBox>
+                            <HBox id="HBox" alignment="CENTER_LEFT" spacing="10.0">
+                              <children>
+                                <Label font="$x1" text="Contact:" />
+                                <Label fx:id="contact_output" font="$x2" text="" />
+                              </children>
+                            </HBox>
+                            <HBox id="HBox" alignment="CENTER_LEFT" spacing="10.0">
+                              <children>
+                                <Label id="createdate_output" font="$x1" text="Create Date:" />
+                                <Label fx:id="createdate_output" font="$x2" text="" />
+                              </children>
+                            </HBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="all_client_tab" text="All Clients">
+                  <content>
+                    <AnchorPane id="Content">
+                      <children>
+                        <SplitPane dividerPositions="0.829981718464351" focusTraversable="true" orientation="VERTICAL" prefHeight="549.0" prefWidth="366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="364.0">
+                              <children>
+                                <TableView fx:id="all_clients_table" layoutX="0.0" layoutY="1.0" prefHeight="549.0" prefWidth="366.0">
+                                  <columns>
+                                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="183.0" text="Client ID" fx:id="all_client_id" />
+                                    <TableColumn prefWidth="183.0" text="Acitve" fx:id="all_client_active" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                            </AnchorPane>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="364.0" style="-fx-background-color:#f2f2f2;">
+                              <children>
+                                <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="21.0" prefWidth="324.0" spacing="5.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="10.0">
+                                  <children>
+                                    <Label text="Client ID:" />
+                                    <Label id="device_id_label" fx:id="client_id_label" prefWidth="58.0" text="" />
+                                    <Button fx:id="client_activ_button" mnemonicParsing="false" onAction="#client_activ" text="Deactivate" />
+                                  </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="331.0000999999975" spacing="5.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="10.0">
+                                  <children>
+                                    <Label text="MAC:" />
+                                    <PasswordField id="password_filed" fx:id="client_mac_field" onAction="#client_mac_filed_enter" prefWidth="180.0" />
+                                    <Button id="change_client_password_button" fx:id="change_client_mac_button" mnemonicParsing="false" onAction="#change_client_mac" text="change" />
+                                  </children>
+                                </HBox>
+                              </children>
+                            </AnchorPane>
+                          </items>
+                        </SplitPane>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="User">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <SplitPane dividerPositions="0.7623400365630713" focusTraversable="true" orientation="VERTICAL" prefHeight="549.0" prefWidth="366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                              <children>
+                                <TableView fx:id="all_user_table" prefHeight="422.0" prefWidth="364.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <columns>
+                                    <TableColumn prefWidth="183.0" text="User ID" fx:id="all_user_id" />
+                                    <TableColumn prefWidth="183.0" text="User Name" fx:id="all_user_name" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                            </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                              <children>
+                                <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="14.0">
+                                  <children>
+                                    <Label text="Password:" />
+                                    <PasswordField fx:id="user_password_input" onAction="#user_password_enter" prefWidth="111.0" />
+                                  </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="14.0">
+                                  <children>
+                                    <Label text="Username:" />
+                                    <TextField fx:id="user_name_input" onAction="#username_enter" prefWidth="111.0" />
+                                  </children>
+                                </HBox>
+                                <Label fx:id="user_edit_stat_label" text="Add User" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0">
+                                  <font>
+                                    <Font size="18.0" />
+                                  </font>
+                                </Label>
+                                <Button fx:id="user_ok_button" mnemonicParsing="false" onAction="#user_confirm" text="OK" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" />
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="78.0">
+                                  <children>
+                                    <Button fx:id="add_user_button" mnemonicParsing="false" onAction="#add_user" text="Add User" />
+                                    <Button fx:id="edit_user_button" mnemonicParsing="false" onAction="#edit_user" text="Edit User" />
+                                    <Button fx:id="del_user_button" mnemonicParsing="false" onAction="#delete_user" text="Delete User" />
+                                  </children>
+                                </HBox>
+                              </children>
+                            </AnchorPane>
+                          </items>
+                        </SplitPane>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <SplitPane dividerPositions="0.7890222984562607" focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="593.0" prefWidth="726.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                  <children>
+                    <TableView id="client_device_table" fx:id="client_permission_table" prefHeight="344.0" prefWidth="716.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <columns>
+                        <TableColumn prefWidth="241.0" text="Client Sender ID" fx:id="col_client_s_id" />
+                        <TableColumn prefWidth="241.0" text="Client Receiver ID" fx:id="col_client_r_id" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="241.0" text="Permission" fx:id="col_permission" />
+                      </columns>
+                    </TableView>
+                  </children>
+                </AnchorPane>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="726.0" style="-fx-background-color:#f2f2f2;">
+                  <children>
+                    <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="689.0" spacing="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="47.0">
+                      <children>
+                        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+                          <children>
+                            <Label text="Client Sender ID:" />
+                            <TextField id="device_id_input" fx:id="client_s_id_input" onAction="#device_enter" prefWidth="118.0" />
+                          </children>
+                        </HBox>
+                        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+                          <children>
+                            <Label text="Client Receiver ID:" />
+                            <TextField id="device_id_input" fx:id="client_r_id_input" onAction="#client_enter" prefWidth="118.0" />
+                          </children>
+                        </HBox>
+                        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+                          <children>
+                            <Label text="Permission:" />
+                            <MenuButton fx:id="permission_button" mnemonicParsing="false" text="read">
+                              <items>
+                                <MenuItem mnemonicParsing="false" onAction="#setPermissionRead" text="read" fx:id="read_permission" />
+                                <MenuItem mnemonicParsing="false" onAction="#setPermissionFetch" text="fetch" fx:id="fetch_permission" />
+                                <MenuItem mnemonicParsing="false" onAction="#setPermissionDelete" text="delete" fx:id="delete_permission" />
+                              </items>
+                            </MenuButton>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                    <Label id="record_methode" fx:id="record_method" text="Add Record:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="14.0">
+                      <font>
+                        <Font name="System Bold" size="16.0" />
+                      </font>
+                    </Label>
+                    <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="12.0">
+                      <children>
+                        <Button fx:id="add_button" defaultButton="false" graphicTextGap="4.0" mnemonicParsing="false" onAction="#add_record" text="Add Record" />
+                        <Button fx:id="edit_button" defaultButton="false" graphicTextGap="4.0" mnemonicParsing="false" onAction="#edit_record" text="Edit Record" />
+                        <Button fx:id="delete_button" defaultButton="false" graphicTextGap="4.0" mnemonicParsing="false" onAction="#delete_record" style="" text="Delete Record" />
+                      </children>
+                    </HBox>
+                    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="84.0">
+                      <children>
+                        <Label alignment="TOP_LEFT" text="Information:" />
+                        <Label fx:id="information_label" prefWidth="455.0" text="" textFill="BLACK" wrapText="true" />
+                      </children>
+                    </HBox>
+                    <HBox id="HBox" alignment="CENTER" layoutX="580.0" layoutY="82.0" spacing="10.0">
+                      <children>
+                        <Button fx:id="clear_button" cancelButton="false" mnemonicParsing="false" onAction="#InputFieldReset" text="reset" />
+                        <Button fx:id="save_button" defaultButton="true" mnemonicParsing="false" onAction="#InputFieldSave" text="Save" />
+                      </children>
+                    </HBox>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <VBox id="VBox" alignment="CENTER_RIGHT" spacing="5.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="27.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER_RIGHT" spacing="5.0">
+          <children>
+            <Label text="Welcome," />
+            <Label fx:id="username_label" text="" />
+          </children>
+        </HBox>
+        <Hyperlink fx:id="logout_button" onAction="#logout" text="Logout" />
+        <HBox id="HBox" alignment="CENTER_RIGHT" spacing="5.0">
+          <children>
+            <Label text="Group:" />
+            <Label fx:id="group_label" text="" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+    <ImageView id="logo_hsa_name" layoutX="14.0" layoutY="9.0" pickOnBounds="true">
+      <image>
+        <Image url="@../images/logo_hsa_name.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>

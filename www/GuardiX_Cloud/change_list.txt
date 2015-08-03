@@ -1,0 +1,132 @@
+//============================================================================
+// 
+// Author      : Li, Yuan
+// File        : change_list.txt
+// email       : abysmli@gmail.com
+// Version     : 3.0
+// Copyright   : All rights reserved by Anhalt University of Applied Sciences
+// Description : 
+//     This File logged all new created files and modified files in Laravel 
+// framework. 
+//
+//============================================================================
+
+
+"../deister.sql" ................................................... created by Li, Yuan 
+
+"./vendor/laravel/framework/src/illuminate/Auth/GenericUser.php" .......................
+................................................................... modified by Li, Yuan
+(# changed line 30 "return $this->attributes['id'];" to "return $this->attrib-
+ utes['mandant_id'];")
+
+"./vendor/laravel/framework/src/illuminate/Database/Query/Builder.php"..................
+................................................................... modified by Li, Yuan
+(# changed line 966 "return $this->where('id', '=', $id)->first($columns);" to 
+ "return $this->where('mandant_id', '=', $id)->first($columns);")
+
+"./public/css" ..................................................... created by Li, Yuan
+
+"./public/css/bootstrap-theme.css" ................................. created by Li, Yuan
+
+"./public/css/bootstrap-theme.min.css" ............................. created by Li, Yuan
+
+"./public/css/bootstrap.css" ....................................... created by Li, Yuan
+
+"./public/css/bootstrap.min.css" ................................... created by Li, Yuan
+
+"./public/css/main.css" ............................................ created by Li, Yuan
+
+"./public/fonts/glyphicons-halflings-regular.eot" .................. created by Li, Yuan
+
+"./public/fonts/glyphicons-halflings-regular.svg" .................. created by Li, Yuan
+
+"./public/fonts/glyphicons-halflings-regular.ttf" .................. created by Li, Yuan
+
+"./public/fonts/glyphicons-halflings-regular.woff" ................. created by Li, Yuan
+
+"./public/js/bootstrap.js" ......................................... created by Li, Yuan
+
+"./public/js/bootstrap.min.js" ..................................... created by Li, Yuan
+
+"./public/js/jquery.min.js" ........................................ created by Li, Yuan
+
+"./public/js/main.js" .............................................. created by Li, Yuan
+
+"./public/js/send_ajax.js" ......................................... created by Li, Yuan
+
+"./app/routes.php" ................................................ modified by Li, Yuan
+
+"./app/filters.php" ............................................... modified by Li, Yuan
+
+"./app/config/app.php" ............................................ modified by Li, Yuan
+
+"./app/config/auth.php" ........................................... modified by Li, Yuan
+
+"./app/config/database.php" ....................................... modified by Li, Yuan
+
+"./app/config/session.php" ........................................ modified by Li, Yuan
+
+"./app/models/AdminLog.php" ........................................ created by Li, Yuan
+
+"./app/models/Client.php" .......................................... created by Li, Yuan
+
+"./app/models/ErrorLog.php" ........................................ created by Li, Yuan
+
+"./app/models/Mandant.php" ......................................... created by Li, Yuan
+
+"./app/models/User.php" ............................................ created by Li, Yuan
+
+"./app/contorllers/AdminLogController.php" ......................... created by Li, Yuan
+
+"./app/contorllers/ClientController.php" ........................... created by Li, Yuan
+
+"./app/contorllers/EventController.php" ............................ created by Li, Yuan
+
+"./app/contorllers/ErrorLogController.php" ......................... created by Li, Yuan
+
+"./app/contorllers/MandantController.php" .......................... created by Li, Yuan
+
+"./app/contorllers/MandantGUIController.php" ....................... created by Li, Yuan
+
+"./app/contorllers/MandantUserController.php" ...................... created by Li, Yuan
+
+"./app/contorllers/UserController.php" ............................. created by Li, Yuan
+
+"./app/views/administration/administration_gui.blade.php" .......... created by Li, Yuan
+
+"./app/views/adminlog/adminlog_gui.blade.php" ...................... created by Li, Yuan
+
+"./app/views/adminlog/adminlog_gui_content.blade.php" .............. created by Li, Yuan
+
+"./app/views/client/client.blade.php" .............................. created by Li, Yuan
+
+"./app/views/client/client_lists.blade.php" ........................ created by Li, Yuan
+
+"./app/views/client/client_modal.blade.php" ........................ created by Li, Yuan
+
+"./app/views/eventlog/eventlog_gui.blade.php" ...................... created by Li, Yuan
+
+"./app/views/eventlog/eventlog_gui_content.blade.php" .............. created by Li, Yuan
+
+"./app/views/errorlog/errorlog_gui.blade.php" ...................... created by Li, Yuan
+
+"./app/views/errorlog/errorlog_gui_content.blade.php" .............. created by Li, Yuan
+
+"./app/views/layout.blade.php" ..................................... created by Li, Yuan
+
+"./app/views/mainpage.blade.php" ................................... created by Li, Yuan
+
+"./app/views/mandant/mandant.blade.php" ............................ created by Li, Yuan
+
+"./app/views/mandant/mandant_lists.blade.php" ...................... created by Li, Yuan
+
+"./app/views/mandant/mandant_modal.blade.php" ...................... created by Li, Yuan
+
+"./app/views/usercontrol/usercontrol.blade.php" .................... created by Li, Yuan
+
+"./app/views/usercontrol/usercontrol_content.blade.php" ............ created by Li, Yuan
+
+"./app/views/usercontrol/usercontrol_modal.blade.php" .............. created by Li, Yuan
+
+"./app/views/user/login.blade.php" ................................. created by Li, Yuan
+
